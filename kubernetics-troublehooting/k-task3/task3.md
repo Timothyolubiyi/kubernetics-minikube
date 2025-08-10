@@ -1,4 +1,4 @@
-# Persistence Volume
+# Persistence Volume   (task not completed, work on it)
 (How do we persist data in k8s)
                        IF  PODS ARE EPHEMERAL
 
@@ -17,3 +17,7 @@ $ echo 'i love devops' > /tmp/text1.txt
 
 Data can not persist when pod is kill/deleted but its can persist with volume mounted.
 
+
+
+
+BUT THE ABOVE SOLUTION WILL NOT WORK IN PROPER COMPANY SETTINGS BC THE DEVELOPERS MAY NOT BE AWARE OF THE FILESE SYSTEM IN THE KUBERNETES CLUSTERS SO WHAT IS USED IS CALL PERSISTENT VOLUME AND PERSISTENT VOLUME CLAIMS
