@@ -10,6 +10,7 @@
 
 # Solution
 1. k run nginimage --image=nginx --port=80
+k exec -it multi-container-pod -- sh
 
 2. k set image pod nginimage nginimage=nginx:1.7.1
 
