@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: librenms
+  labels:
+    app: librenms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: librenms
+  template:
+    metadata:
+      labels:
+        app: librenms
+    spec:
+      containers:
+      - name: librenms
+        image: librenms/librenms:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: TZ
+          value: "Africa/Lagos"
+        - name: DB_HOST
+          value: "librenms-db"
+        - name: DB_NAME
+          value: "librenms"
+        - name: DB_USER
+          value: "librenms"
+        - name: DB_PASSWORD
+          value: "librenms"

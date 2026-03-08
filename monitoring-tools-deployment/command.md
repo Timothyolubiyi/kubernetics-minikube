@@ -4,7 +4,7 @@ minikube start
 alias k=kubectl
 k get nodes
 k get pods 
-k get po
+k get pods
 k create namespace test
 k apply -f deployment.yaml
 k apply -f service.yaml 
@@ -34,9 +34,9 @@ k get pods -n test
 
 k logs jenkins-6fb994cfc5-twnvn -n test
 
-# to run nginx on the browser run the command within the test namespace
+# to run nginx on the browser with IP/Service link, run the command within the test namespace
 
- minikube service nginx -n test
+ minikube service jenkins -n test
 
 
  ## =========================================================
